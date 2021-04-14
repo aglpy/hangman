@@ -7,3 +7,13 @@ word_len: "Introduce the desired word length or press enter to get a completely 
 len_no_int: "The length given is not correct, introduce a positive natural number: "
 invalid_len: "Introduce a number higher than 0: "
 large_len: "Introduce a smaller length: "
+remaining_letters: "Remaining letters: "
+used_letters: "Used letters: "
+input: "Give a new letter or enter the word to guess it: "
+player_input: "It is the turn of "
+invalid_input: "Invalid input, try again: "
+you_win: You win!
+player_win: " win!"
+game_over: GAME OVER
+play_again: Press enter to play again
+reveal_word: "The word was... "

@@ -7,3 +7,13 @@ word_len: "Introduce la longitud deseada para la palabra o pulsa enter para una 
 len_no_int: "La longitud introducida no es correcta, introduce un número entero positivo: "
 invalid_len: "Introduce un número mayor que 0: "
 large_len: "Introduce una longitud mas pequeña: "
+remaining_letters: "Letras restantes: "
+used_letters: "Letras usadas: "
+input: "Introduce una nueva letra o la palabra adivinada: "
+player_input: "Es el turno de "
+invalid_input: "Respuesta incorrecta, inténtalo de nuevo: "
+you_win: Has ganado!
+player_win: " ha ganado!"
+game_over: Has perdido!
+play_again: Pulsa enter para jugar de nuevo
+reveal_word: "La palabra era... "

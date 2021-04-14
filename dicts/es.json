@@ -1,4 +1,6 @@
 {
+    "letters": "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ",
+    "length": {
     "1": [
         "a",
         "b",
@@ -80428,4 +80430,4 @@
     "23": [
         "electroencefalografista"
     ]
-}
+}}

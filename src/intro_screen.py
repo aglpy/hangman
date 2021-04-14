@@ -21,10 +21,12 @@ def get_language(texts):
 def get_player_names():
     # Get the list of player names
     players = input().split(',')
+    if len(players) == 1:
+        return []
     clean_players = list(map(lambda x: x.strip(), players)) # Names are cleaned of spaces
     return clean_players
 
-def launch(lang='es', lang_selected=False):
+def launch(lang='en', lang_selected=False):
     # Texts are loaded
     texts = yaml.safe_load(open(f'lang/{lang}.yaml', 'r', encoding='utf-8'))
 
