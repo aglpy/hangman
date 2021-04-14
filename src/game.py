@@ -1,4 +1,6 @@
 import os
+import random
+
 
 def get_word_len(texts, max_len):
     # Return the length of the word or an empty string for random length
@@ -18,8 +20,19 @@ def get_word_len(texts, max_len):
 
     return word_len
 
+def get_random_word(word_len, words):
+    # Return a random word based on word length given
+    if word_len == '':
+        elegible_words = []
+        for pack in words.values():
+            elegible_words += pack
+    else:
+        elegible_words = words.get(str(word_len))
+    
+    return random.choice(elegible_words)
 def play(texts, players, words):
     os.system('cls')
 
     max_len = max(map(int, words.keys()))
     word_len = get_word_len(texts, max_len)
+    word = get_random_word(word_len, words)
