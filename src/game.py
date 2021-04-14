@@ -116,16 +116,16 @@ def color_win():
 def play(texts, players, words):
     os.system('cls')
 
-    max_len = max(map(int, words.get('length').keys()))
+    max_len = max(map(int, words.get('length').keys())) # Max word length available in this language
     word_len = get_word_len(texts, max_len)
     word = get_random_word(word_len, words)
 
     max_fails = 10
     fails = 0
-    guess_word = '_' * len(word)
+    guess_word = '_' * len(word) # Empty word at the beginging
     remaining_letters = list(words.get('letters'))
     used_letters = []
-    random.shuffle(players)
+    random.shuffle(players) # Ramdomize players
     len_players = len(players)
     current_player = -1
 
@@ -139,7 +139,7 @@ def play(texts, players, words):
         print(texts.get('used_letters') + ' '.join(used_letters) + '\n')
 
         draw_fails(fails)
-        if fails == max_fails:
+        if fails == max_fails: # Max fails reached
             break
 
         if len_players:
@@ -147,17 +147,17 @@ def play(texts, players, words):
         
         c = input(texts.get('input')).upper()
 
-        while not check_correct_input(c, words.get('letters')):
+        while not check_correct_input(c, words.get('letters')): # Check if the input is valid
             c = input(texts.get('invalid_input')).upper()
         
-        if len(c) > 1:
+        if len(c) > 1: # A word has been given
             if c == word:
                 guess_word = c
             else:
                 fails += 1
                 color_fail()
-        else:
-            if c not in remaining_letters:
+        else: # A letter has been given
+            if c not in remaining_letters: # If letter is already given... it is a fail...
                 fails += 1
                 color_fail()
             else:
@@ -175,15 +175,15 @@ def play(texts, players, words):
     print_word(guess_word)
     print(texts.get('remaining_letters') + ' '.join(remaining_letters))
     print(texts.get('used_letters') + ' '.join(used_letters) + '\n')
+    draw_fails(fails)
     if word == guess_word:
-        result_color(True)
         if not len_players:
             print(texts.get('you_win'))
         else:
             print(players[current_player % len_players] + texts.get('player_win'))
     else:
-        result_color(False)
         print(texts.get('game_over'))
         print(texts.get('reveal_word') + word)
-    draw_fails(fails)
+    result_color(word == guess_word)
+    
 
