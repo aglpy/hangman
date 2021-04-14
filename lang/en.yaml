@@ -3,3 +3,7 @@ switch_lang: "Select your language:\nes: Spanish\nen: English"
 unknown_lang: "Unknown language, valid entries: "
 wellcome: Wellcome! Now write the player names separated by comma, if you are going to play alone, just press enter!
 start_game: Press enter to start a new game
+word_len: "Introduce the desired word length or press enter to get a completely random word: "
+len_no_int: "The length given is not correct, introduce a positive natural number: "
+invalid_len: "Introduce a number higher than 0: "
+large_len: "Introduce a smaller length: "

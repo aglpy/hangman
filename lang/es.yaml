@@ -3,3 +3,7 @@ switch_lang: "Elige tu idioma\nes: Español\nen: Inglés"
 unknown_lang: "Idioma desconocido, entradas válidas: "
 wellcome: Bienvenido! Ahora introduce el nombre de los jugadores separados por comas, si vas a jugar solo pulsa enter!
 start_game: Pulsa enter para empezar una nueva partida
+word_len: "Introduce la longitud deseada para la palabra o pulsa enter para una palabra completamente aleatoria: "
+len_no_int: "La longitud introducida no es correcta, introduce un número entero positivo: "
+invalid_len: "Introduce un número mayor que 0: "
+large_len: "Introduce una longitud mas pequeña: "
